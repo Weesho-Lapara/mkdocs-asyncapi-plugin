@@ -45,7 +45,7 @@ class AsyncAPIPlugin(BasePlugin):
             attributes = dict(re.findall(r'(\w+)\s*=\s*"([^"]+)"', tag_content))
             try:
                 # configuration for show property
-                schema_path = attributes.get('src', 'https://github.com/Weesho-Lapara/mkdocs-asyncapi-plugin/blob/main/schema.json')
+                schema_path = os.path.join(config['docs_dir'],attributes.get('src', 'schema.json'))
                 sidebar = attributes.get('sidebar', 'true').lower() == 'true'
                 info = attributes.get('info', 'true').lower() == 'true'
                 servers = attributes.get('servers', 'true').lower() == 'true'
