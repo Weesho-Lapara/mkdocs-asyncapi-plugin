@@ -21,10 +21,10 @@ jobs:
     - name: Install dependencies
       run: |
         pip3 install --upgrade pip
-        pip3 install --upgrade setuptools
         pip3 install --upgrade wheel
         pip3 install pylint pytest pyflakes pytest-cov
         pip3 install -e .
+        pip3 install --upgrade setuptools
 
     - name: Static code checking with pyflakes
       run: |
