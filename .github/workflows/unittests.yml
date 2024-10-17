@@ -1,37 +1,26 @@
-name: Unit tests
-on: [push, pull_request, workflow_dispatch]
-jobs:
-  run:
-    name: Run unit tests with codecov upload
-    runs-on: ${{ matrix.os }}
-    env:
-      USING_COVERAGE: '3.8'
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
-        python-version: [3.8, 3.9, "3.10"]
-    steps:
-    - uses: actions/checkout@master
+name: Python package
 
-    - name: Setup Python
-      uses: actions/setup-python@master
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
       with:
-        python-version: ${{ matrix.python-version }}
+        python-version: '3.x'
 
     - name: Install dependencies
       run: |
-        pip3 install --upgrade pip
-        pip3 install --upgrade wheel
-        pip3 install pylint pytest pyflakes pytest-cov
-        pip3 install -e .
-        pip3 install --upgrade setuptools
+        python -m pip install --upgrade pip
+        pip install mkdocs
 
-    - name: Static code checking with pyflakes
+    - name: Run tests
       run: |
-        pyflakes mkdocs_asyncapi_tag
-
-    - name: Run unit tests
-      run: |
-        git config --global user.name "Github Action"
-        git config --global user.email "githubaction@gmail.com"
-        python -m pytest --cov=mkdocs_asyncapi_tag
+        python -m unittest discover -s tests

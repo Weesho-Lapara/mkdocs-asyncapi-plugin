@@ -5,11 +5,10 @@ Summary: MkDocs plugin to embed AsyncAPI HTML viewer in your markdown file.
 Home-page: https://github.com/Weesho-Lapara/mkdocs-asyncapi-tag-plugin
 Author: Weesho Lapara
 Author-email: support@weesholapara.com
+License: UNKNOWN
+Description: # mkdocs-asyncapi-plugin
+        This plugin helps to render AsycnAPI schema in your mkdocs markdown page.
+        
 Keywords: mkdocs asyncapi,asyncapi render markdown
+Platform: UNKNOWN
 Description-Content-Type: text/markdown
-License-File: LICENSE.txt
-Requires-Dist: mkdocs>=1.0.4
-Requires-Dist: beautifulsoup4>=4.6.0
-
-# mkdocs-asyncapi-plugin
-This plugin helps to render AsycnAPI schema in your mkdocs markdown page.
