@@ -23,7 +23,7 @@ jobs:
         pip3 install --upgrade pip
         pip3 install --upgrade setuptools
         pip3 install --upgrade wheel
-        pip3 intall pylint pytest pyflakes
+        pip3 install pylint pytest pyflakes
         pip3 install -e .
 
     - name: Static code checking with pyflakes
