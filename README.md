@@ -1,23 +1,32 @@
 # mkdocs-asyncapi-plugin
-This plugin helps to render AsycnAPI schema in your mkdocs markdown page. It uses AsyncAPI Standalone react component to render your asyncapi schema file. This plugin supports both .json and .yml files. 
 
-To install the plugin:
+The `mkdocs-asyncapi-plugin` helps render AsyncAPI schemas in your MkDocs markdown pages. It uses the AsyncAPI Standalone React component to render your AsyncAPI schema files. This plugin supports both `.json` and `.yml` files.
 
-`pip install mkdocs-asyncapi-plugin`
+## Installation
 
-Then, in the mkdocs.yml file, include the plugin in the plugins property as:
+To install the plugin, run:
 
+```sh
+pip install mkdocs-asyncapi-tag-plugin
 ```
+
+Then, include the plugin in the `plugins` property of your `mkdocs.yml` file:
+
+```sh
     plugins:
         - asyncapi
 ```
 
-To start using the tag to render your schema, simply use the tag:
+## Usage
 
-`<asyncapi-tag src="/path/to/schema.json"/>`
+To render your schema, use the <asyncapi-tag> in your markdown files:
+
+```HTML
+    <asyncapi-tag src="/path/to/schema.json"/>
+```
 
 ## Accepted values
-In addition to the `src` attribute following attributes work with the tag.
+In addition to the `src` attribute, the following attributes can be used with the `<asyncapi-tag>`:
 
 | Action | Attribute | Accepted values |
 |---|---|---|
