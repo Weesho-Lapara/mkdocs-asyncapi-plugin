@@ -8,7 +8,7 @@ import json
 class AsyncAPIPlugin(BasePlugin):
 
     config_scheme = (
-        ('asyncapi_file', config_options.Type(str, default='https://github.com/Weesho-Lapara/mkdocs-asyncapi-plugin/blob/main/schema.json')),
+        ('asyncapi_file', config_options.Type(str, default='schema.json')),
     )
 
     def on_files(self, files, config):
