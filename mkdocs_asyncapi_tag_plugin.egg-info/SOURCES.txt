@@ -13,4 +13,4 @@ mkdocs_asyncapi_tag_plugin.egg-info/entry_points.txt
 mkdocs_asyncapi_tag_plugin.egg-info/requires.txt
 mkdocs_asyncapi_tag_plugin.egg-info/top_level.txt
 tests/__init__.py
-tests/unittests.py
+tests/test_asyncapi_plugin.py
