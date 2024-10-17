@@ -1,7 +1,7 @@
 import unittest
 from mkdocs.config.defaults import MkDocsConfig
 from mkdocs.structure.files import Files
-from asyncapi_plugin import AsyncAPIPlugin
+from mkdocs_asyncapi_tag.mkdocs_asyncapi_plugin import AsyncAPIPlugin
 
 class TestAsyncAPIPlugin(unittest.TestCase):
 
