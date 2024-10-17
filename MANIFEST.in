@@ -1,0 +1,5 @@
+global-include *.txt *.py
+include pyproject.toml
+include *.md
+include LICENSE
+recursive-include tests unittests.py

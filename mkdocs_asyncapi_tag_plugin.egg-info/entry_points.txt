@@ -1,0 +1,2 @@
+[mkdocs.plugins]
+asyncapi = mkdocs_asyncapi_tag_plugin.mkdocs_asyncapi_plugin:AsyncAPIPlugin

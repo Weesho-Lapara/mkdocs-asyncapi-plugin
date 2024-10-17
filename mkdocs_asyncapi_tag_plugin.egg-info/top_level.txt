@@ -1,0 +1,1 @@
+mkdocs_asyncapi_tag

@@ -1,7 +1,6 @@
 from mkdocs.plugins import BasePlugin
 from mkdocs.config import config_options
 from mkdocs.structure.files import File
-import xml.etree.ElementTree as ET
 import os
 import re
 import json
