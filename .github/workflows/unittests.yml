@@ -23,7 +23,7 @@ jobs:
         pip3 install --upgrade pip
         pip3 install --upgrade setuptools
         pip3 install --upgrade wheel
-        pip3 install pyflakes
+        pip3 intall pylint pytest pyflakes
         pip3 install -e .
 
     - name: Static code checking with pyflakes
@@ -34,4 +34,4 @@ jobs:
       run: |
         git config --global user.name "Github Action"
         git config --global user.email "githubaction@gmail.com"
-        pytest --cov=mkdocs_asyncapi_tag
+        python -m pytest --cov=mkdocs_asyncapi_tag
