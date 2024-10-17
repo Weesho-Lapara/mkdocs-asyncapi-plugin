@@ -14,7 +14,7 @@ Then, include the plugin in the `plugins` property of your `mkdocs.yml` file:
 
 ```sh
     plugins:
-        - asyncapi
+        - asyncapi-tag
 ```
 
 ## Usage

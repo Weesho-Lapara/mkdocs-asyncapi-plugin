@@ -117,8 +117,4 @@ class AsyncAPIPlugin(BasePlugin):
             # Inject the AsyncAPI viewer just before closing body tag
             html += asyncapi_viewer
         return html
-    
-                # console.log('Initializing AsyncAPI Viewer...');
-                
-                # const schemaPath = '/async/schema.json';  // Adjust the path as necessary
 
