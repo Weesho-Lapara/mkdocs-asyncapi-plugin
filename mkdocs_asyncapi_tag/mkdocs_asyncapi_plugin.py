@@ -97,7 +97,7 @@ class AsyncAPIPlugin(BasePlugin):
                     if (!response.ok) {{
                         throw new Error(`Failed to fetch schema. Status: ${{response.status}}`);
                     }}
-                    return response.json();
+                    return response.text();
                 }}).then(schemaDoc => {{
                 
                     console.log('Schema fetched successfully:', schemaDoc);
